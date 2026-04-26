@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>与你的每一天</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="petals-container" id="petals"></div>
+
+<div class="page-wrapper">
+
+  <header class="header">
+    <div class="header-label">Every Day With You</div>
+    <h1 class="header-title">我们在一起的 <span class="accent">第 <span id="headline-days">--</span> 天</span></h1>
+  </header>
+
+  <div class="line-ornament"></div>
+
+  <main class="counter-card">
+    <div class="since-label">SINCE</div>
+    <div class="since-date">2026 年 1 月 25 日</div>
+
+    <div class="days-row">
+      <span class="days-number" id="days">--</span>
+      <span class="days-unit">天</span>
+    </div>
+
+    <div class="time-detail">
+      <div class="time-unit">
+        <span class="time-value" id="hours">--</span>
+        <span class="time-label">时</span>
+      </div>
+      <span class="time-separator">:</span>
+      <div class="time-unit">
+        <span class="time-value" id="minutes">--</span>
+        <span class="time-label">分</span>
+      </div>
+      <span class="time-separator">:</span>
+      <div class="time-unit">
+        <span class="time-value" id="seconds">--</span>
+        <span class="time-label">秒</span>
+      </div>
+    </div>
+  </main>
+
+  <section class="quote-section">
+    <div class="line-ornament gold" style="margin-bottom:1.2rem"></div>
+    <div class="fortune-tag">
+      <span class="fortune-icon" id="fortune-icon">✦</span>
+      <span id="fortune-label">今日运势</span>
+    </div>
+    <p class="quote-text" id="quote-text"></p>
+    <p class="quote-author" id="quote-author"></p>
+  </section>
+
+  <!-- ── Calendar Message Board ── -->
+  <section class="calendar-section" id="calendar-section">
+    <div class="line-ornament" style="margin-bottom:1.5rem"></div>
+    <h2 class="section-title">留言日历</h2>
+    <div class="calendar-container">
+      <div class="calendar-nav">
+        <button class="cal-nav-btn" id="cal-prev">‹</button>
+        <span class="cal-month-label" id="cal-month-label"></span>
+        <button class="cal-nav-btn" id="cal-next">›</button>
+      </div>
+      <div class="calendar-weekdays">
+        <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+      </div>
+      <div class="calendar-grid" id="calendar-grid"></div>
+    </div>
+
+    <div class="msg-panel" id="msg-panel" style="display:none">
+      <div class="msg-panel-header">
+        <span class="msg-panel-date" id="msg-panel-date"></span>
+        <button class="msg-panel-close" id="msg-panel-close">✕</button>
+      </div>
+      <div class="msg-list" id="msg-list"></div>
+      <div class="msg-input-row">
+        <input type="text" class="msg-input" id="msg-input" placeholder="写点什么…" maxlength="500">
+        <button class="msg-send-btn" id="msg-send">发送</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Photo Album ── -->
+  <section class="album-section" id="album-section">
+    <div class="line-ornament" style="margin-bottom:1.5rem"></div>
+    <h2 class="section-title">我们的相册</h2>
+    <div class="album-toolbar">
+      <label class="album-upload-btn">
+        <input type="file" accept="image/*" id="album-file-input" style="display:none" multiple>
+        上传照片
+      </label>
+      <div class="album-upload-status" id="album-upload-status"></div>
+    </div>
+    <div class="album-grid" id="album-grid"></div>
+    <button class="album-load-more" id="album-load-more" style="display:none">加载更多</button>
+  </section>
+
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox" style="display:none">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <button class="lightbox-next" id="lightbox-next">›</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer class="footer">
+    <div class="line-ornament" style="margin-bottom:0.8rem"></div>
+    <p class="footer-text" id="beijing-time"></p>
+  </footer>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/github-api.js"></script>
+<script src="js/user.js"></script>
+<script src="js/quotes.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/album.js"></script>
+<script src="js/cat-pet.js"></script>
+</body>
+</html>
