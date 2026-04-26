@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"\" \"d:\\\\Users\\\\doc\\\\ai\\\\cursor\\\\file\\\\2604232230_calendar\\\\index.html\")",
+      "Bash(start \"\" \"index.html\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(npx -y http-server -p 8765 --cors -c-1)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8765/index.html)",
+      "Bash(python -m http.server 8766)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8766/index.html)",
+      "mcp__plugin_playwright_playwright__browser_tabs",
+      "Bash(start *)",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"var fs = require\\('fs'\\); var files = ['js/config.js','js/config.example.js','js/github-api.js','js/user.js','js/quotes.js','js/counter.js','js/calendar.js','js/album.js','js/cat-pet.js']; files.forEach\\(function\\(f\\) { var code = fs.readFileSync\\(f, 'utf8'\\); try { new Function\\(code\\); console.log\\('OK: ' + f\\); } catch\\(e\\) { console.log\\('SYNTAX ERROR: ' + f + ' - ' + e.message\\); } }\\);\")",
+      "Bash(where gh *)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" --version)",
+      "Bash(\"/c/Program Files \\(x86\\)/GitHub CLI/gh.exe\" --version)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
